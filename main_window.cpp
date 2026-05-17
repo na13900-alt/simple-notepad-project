@@ -319,7 +319,6 @@ void main_window::setup_status_bar()
     update_status_bar();
 }
 
-// ---------- status bar ----------
 
 void main_window::update_status_bar()
 {
