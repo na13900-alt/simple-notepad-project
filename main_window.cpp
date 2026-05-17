@@ -17,6 +17,8 @@
 #include <QMenu>
 #include <QMenuBar>
 #include <QMessageBox>
+#include <QPrintDialog>
+#include <QPrinter>
 #include <QRegularExpression>
 #include <QSettings>
 #include <QStatusBar>
