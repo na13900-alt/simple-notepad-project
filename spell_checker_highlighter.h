@@ -12,17 +12,15 @@ class spell_checker_highlighter : public QSyntaxHighlighter {
     Q_OBJECT
 
 public:
-    explicit spell_checker_highlighter(QTextDocument* document, const spell_checker& checker)
+    explicit spell_checker_highlighter(QTextDocument *document, const spell_checker &checker)
         : QSyntaxHighlighter(document)
-        , checker(checker)
-    {
+          , checker(checker) {
         misspelled_format.setUnderlineColor(Qt::red);
         misspelled_format.setUnderlineStyle(QTextCharFormat::SpellCheckUnderline);
     }
 
 protected:
-    void highlightBlock(const QString& text) override
-    {
+    void highlightBlock(const QString &text) override {
         static const QRegularExpression word_re(R"(\b[A-Za-z]+\b)");
         auto it = word_re.globalMatch(text);
         while (it.hasNext()) {
@@ -35,7 +33,7 @@ protected:
     }
 
 private:
-    const spell_checker& checker;
+    const spell_checker &checker;
     QTextCharFormat misspelled_format;
 };
 

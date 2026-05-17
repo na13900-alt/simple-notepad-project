@@ -8,22 +8,22 @@ find_package(Qt6 REQUIRED COMPONENTS Widgets PrintSupport)
 qt_standard_project_setup()
 
 qt_add_executable(
-    notepad
-    main.cpp
-    main_window.h
-    main_window.cpp
-    text_transform.h
-    notepad_exception.h
-    spell_checker.h
-    spell_checker_highlighter.h
-    line_number_area.h
-    find_replace_dialog.ui
-    word_frequency_dialog.ui
+        notepad
+        main.cpp
+        main_window.h
+        main_window.cpp
+        text_transform.h
+        notepad_exception.h
+        spell_checker.h
+        spell_checker_highlighter.h
+        line_number_area.h
+        find_replace_dialog.ui
+        word_frequency_dialog.ui
 )
 target_link_libraries(notepad PRIVATE Qt6::Widgets Qt6::PrintSupport)
 
 add_executable(
-    test_exceptions
-    test_exceptions.cpp
-    notepad_exception.h
+        test_exceptions
+        test_exceptions.cpp
+        notepad_exception.h
 )
